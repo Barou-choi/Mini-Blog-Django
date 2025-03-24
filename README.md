@@ -1,4 +1,6 @@
 # Projet-gestion-des-tudiants
+Etudiant: Ichchou Youssad
+classe: 3IIR Groupe 20
 
 Cette application permet de gérer les informations des étudiants ainsi que leurs notes dans un établissement scolaire. Les enseignants ou administrateurs peuvent ajouter des étudiants, enregistrer leurs notes par matière et générer des bulletins scolaires détaillant les résultats.
 
