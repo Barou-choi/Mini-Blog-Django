@@ -1,0 +1,31 @@
+{% extends 'articles/base.html' %}
+
+{% block title %}{{ article.titre }} - Blog{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title">{{ article.titre }}</h1>
+        <div class="text-muted mb-3">
+            <span class="badge bg-secondary">{{ article.categorie }}</span>
+            Par {{ article.auteur.username }} - 
+            Publié le {{ article.date_creation|date:"d/m/Y à H:i" }}
+        </div>
+        <div class="article-content">
+            {{ article.contenu|safe }}
+        </div>
+    </div>
+</div>
+
+<div class="mt-4">
+    <a href="{% url 'accueil' %}" class="btn btn-secondary">Retour à l'accueil</a>
+    {% if user == article.auteur %}
+    <form action="{% url 'supprimer_article' article.pk %}" method="post" style="display: inline;">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article ?')">
+            Supprimer
+        </button>
+    </form>
+    {% endif %}
+</div>
+{% endblock %} 
