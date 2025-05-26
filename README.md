@@ -1,21 +1,23 @@
-# Projet-gestion-des-tudiants
-Etudiant: Ichchou Youssad
-classe: 3IIR Groupe 20
+# Mini Blog Django
 
-Cette application permet de gérer les informations des étudiants ainsi que leurs notes dans un établissement scolaire. Les enseignants ou administrateurs peuvent ajouter des étudiants, enregistrer leurs notes par matière et générer des bulletins scolaires détaillant les résultats.
+## Description
 
- Technologies utilisées :
+Mini Blog Django est une application web simple développée avec le framework Django. Elle permet aux utilisateurs de consulter une liste d’articles triés du plus récent au plus ancien, ainsi que de créer, modifier et supprimer des articles après authentification. Le contenu des articles est enrichi grâce à CKEditor, offrant une expérience d’édition améliorée.
 
-Backend : Django
+## Fonctionnalités
 
-Base de données : SQLite
+- Page d’accueil affichant la liste des articles avec tri par date.
+- Authentification utilisateur (connexion et déconnexion).
+- Création d’articles via un formulaire accessible uniquement aux utilisateurs connectés.
+- Suppression d’articles.
+- Affichage détaillé du contenu complet des articles.
+- Gestion des catégories d’articles (ex : Django, Python, Actualités).
+- Utilisation de CKEditor pour le contenu enrichi.
+- Base de données SQLite par défaut.
 
-Frontend : HTML, CSS
+## Technologies utilisées
 
- Fonctionnalités :
-
-Ajouter un étudiant : Permet d'ajouter un nouvel étudiant avec ses informations personnelles (nom, prénom, date de naissance, etc.).
-
-Enregistrer les notes : Les enseignants peuvent enregistrer les notes des étudiants pour chaque matière.
-
-Générer un bulletin : Générer un bulletin scolaire détaillant les performances de chaque étudiant par matière, avec des moyennes et des appréciations.
+- Django
+- HTML / CSS
+- CKEditor (django-ckeditor)
+- SQLite (base de données intégrée)
